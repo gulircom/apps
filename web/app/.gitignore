@@ -7,7 +7,7 @@ phpunit.xml
 uploads
 upgrade
 cache
-plugins
+# plugins
 
 # Project Files
 dist

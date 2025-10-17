@@ -1,0 +1,277 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "gulir-elements/cta",
+  "version": "0.1.0",
+  "title": "Call to Actions - Ruby",
+  "category": "widgets",
+  "icon": "superhero-alt",
+  "description": "Displays customizable call-to-action sections to engage users and drive conversions.",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "gulir-core",
+  "editorScript": "file:./index.js",
+  "keywords": [
+    "ruby",
+    "gulir",
+    "call to action",
+    "cta",
+    "button",
+    "link",
+    "subscribe",
+    "signup",
+    "email",
+    "download",
+    "action",
+    "marketing",
+    "promotion",
+    "lead",
+    "conversion",
+    "campaign",
+    "banner"
+  ],
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Ready to Take the Next Step?"
+    },
+    "headingHTMLTag": {
+      "type": "string",
+      "default": "h2"
+    },
+    "tocAdded": {
+      "type": "boolean",
+      "default": true
+    },
+    "headingColor": {
+      "type": "string",
+      "default": ""
+    },
+    "darkHeadingColor": {
+      "type": "string",
+      "default": ""
+    },
+    "desktopHeadingSize": {
+      "type": "string",
+      "default": ""
+    },
+    "tabletHeadingSize": {
+      "type": "string",
+      "default": ""
+    },
+    "mobileHeadingSize": {
+      "type": "string",
+      "default": ""
+    },
+    "desktopHeadingMargin": {
+      "type": "string",
+      "default": ""
+    },
+    "tabletHeadingMargin": {
+      "type": "string",
+      "default": ""
+    },
+    "mobileHeadingMargin": {
+      "type": "string",
+      "default": ""
+    },
+    "description": {
+      "type": "string",
+      "default": "Join us today and start transforming your experience. Don't miss out on exclusive benefits!"
+    },
+    "descriptionColor": {
+      "type": "string",
+      "default": ""
+    },
+    "darkDescriptionColor": {
+      "type": "string",
+      "default": ""
+    },
+    "desktopDescriptionSize": {
+      "type": "string",
+      "default": ""
+    },
+    "tabletDescriptionSize": {
+      "type": "string",
+      "default": ""
+    },
+    "mobileDescriptionSize": {
+      "type": "string",
+      "default": ""
+    },
+    "desktopDescriptionMargin": {
+      "type": "string",
+      "default": ""
+    },
+    "tabletDescriptionMargin": {
+      "type": "string",
+      "default": ""
+    },
+    "mobileDescriptionMargin": {
+      "type": "string",
+      "default": ""
+    },
+    "imageID": {
+      "type": "number"
+    },
+    "image": {
+      "type": "string",
+      "default": ""
+    },
+    "imageURL": {
+      "type": "string",
+      "default": ""
+    },
+    "imagePos": {
+      "type": "boolean",
+      "default": false
+    },
+    "imageRadius": {
+      "type": "number"
+    },
+    "desktopImageSize": {
+      "type": "string",
+      "default": ""
+    },
+    "tabletImageSize": {
+      "type": "string",
+      "default": ""
+    },
+    "mobileImageSize": {
+      "type": "string",
+      "default": ""
+    },
+    "ctaButtons": {
+      "type": "array",
+      "default": [
+        {
+          "label": "Get Started",
+          "link": "#",
+          "isNewTab": false,
+          "noFollow": false,
+          "isButtonBorder": false
+        }
+      ]
+    },
+    "buttonColor": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonBg": {
+      "type": "string",
+      "default": ""
+    },
+    "darkButtonColor": {
+      "type": "string",
+      "default": ""
+    },
+    "darkButtonBg": {
+      "type": "string",
+      "default": ""
+    },
+    "isBorderButtonColor": {
+      "type": "string",
+      "default": ""
+    },
+    "isBorderButtonBorder": {
+      "type": "string",
+      "default": ""
+    },
+    "isBorderDarkButtonColor": {
+      "type": "string",
+      "default": ""
+    },
+    "isBorderDarkButtonBg": {
+      "type": "string",
+      "default": ""
+    },
+    "desktopButtonSize": {
+      "type": "string",
+      "default": ""
+    },
+    "tabletButtonSize": {
+      "type": "string",
+      "default": ""
+    },
+    "mobileButtonSize": {
+      "type": "string",
+      "default": ""
+    },
+    "overlayLink": {
+      "type": "string",
+      "default": ""
+    },
+    "overlayLinkNewTab": {
+      "type": "boolean",
+      "default": true
+    },
+    "overlayLinkNoFollow": {
+      "type": "boolean",
+      "default": true
+    },
+    "shadow": {
+      "type": "boolean",
+      "default": true
+    },
+    "borderStyle": {
+      "type": "string",
+      "default": ""
+    },
+    "borderColor": {
+      "type": "string",
+      "default": ""
+    },
+    "darkBorderColor": {
+      "type": "string",
+      "default": ""
+    },
+    "borderWidth": {
+      "type": "object",
+      "default": {
+        "top": null,
+        "right": null,
+        "bottom": null,
+        "left": null
+      }
+    },
+    "borderRadius": {
+      "type": "number"
+    },
+    "background": {
+      "type": "string",
+      "default": ""
+    },
+    "darkBackground": {
+      "type": "string",
+      "default": ""
+    },
+    "desktopPadding": {
+      "type": "object",
+      "default": {
+        "top": "30px",
+        "right": "30px",
+        "bottom": "30px",
+        "left": "30px"
+      }
+    },
+    "tabletPadding": {
+      "type": "object",
+      "default": {
+        "top": "25px",
+        "right": "25px",
+        "bottom": "25px",
+        "left": "25px"
+      }
+    },
+    "mobilePadding": {
+      "type": "object",
+      "default": {
+        "top": "20px",
+        "right": "20px",
+        "bottom": "20px",
+        "left": "20px"
+      }
+    }
+  }
+}

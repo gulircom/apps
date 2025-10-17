@@ -1,0 +1,119 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "gulir/image-slider",
+  "version": "0.1.0",
+  "title": "Image Slider – Ruby",
+  "category": "widgets",
+  "icon": "superhero-alt",
+  "description": "A responsive image slider block with captions and optional scrollbar.",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "gulir-core",
+  "editorScript": "file:./index.js",
+  "keywords": [
+    "image",
+    "slider",
+    "carousel",
+    "gallery",
+    "swiper"
+  ],
+  "attributes": {
+    "images": {
+      "type": "array",
+      "default": [],
+      "source": "query",
+      "query": {
+        "url": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "img",
+          "attribute": "src"
+        },
+        "fullUrl": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "img",
+          "attribute": "data-full-url"
+        },
+        "link": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "img",
+          "attribute": "data-link"
+        },
+        "alt": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "img",
+          "attribute": "alt",
+          "default": ""
+        },
+        "id": {
+          "type": "string",
+          "source": "attribute",
+          "selector": "img",
+          "attribute": "data-id"
+        },
+        "caption": {
+          "type": "string",
+          "source": "html",
+          "selector": ".gb-slider-item__caption"
+        }
+      }
+    },
+    "ids": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "default": []
+    },
+    "shortCodeTransforms": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object"
+      }
+    },
+    "ratio": {
+      "type": "number",
+      "default": 60
+    },
+    "borderRadius": {
+      "type": "number"
+    },
+    "autoplay": {
+      "type": "boolean",
+      "default": false
+    },
+    "caption": {
+      "type": "string",
+      "source": "html",
+      "selector": ".gb-slider-caption"
+    },
+    "imageCrop": {
+      "type": "boolean",
+      "default": false
+    },
+    "fixedHeight": {
+      "type": "boolean",
+      "default": true
+    },
+    "linkTarget": {
+      "type": "string"
+    },
+    "linkTo": {
+      "type": "string"
+    },
+    "sizeSlug": {
+      "type": "string",
+      "default": "large"
+    },
+    "allowResize": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
