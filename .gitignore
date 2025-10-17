@@ -1,10 +1,12 @@
 # Application
+vendor/
+node_modules/
 web/app/plugins/*
 !web/app/plugins/gulir-core
 !web/app/plugins/.gitkeep
 web/app/mu-plugins/*/
-!web/app/mu-plugins/
-# web/app/themes/gulircom/
+!web/app/mu-plugins/gulir-plugin
+# web/app/themes/gulir/
 web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
