@@ -16,4 +16,4 @@
  * @package           TenUpPlugin
  */
 
-require_once __DIR__ . '/newskit-plugin/plugin.php';
+require_once __DIR__ . '/gulir-plugin/plugin.php';
