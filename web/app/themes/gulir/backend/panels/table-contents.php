@@ -1,0 +1,175 @@
+<?php
+/** Don't load directly */
+defined( 'ABSPATH' ) || exit;
+
+if ( ! function_exists( 'gulir_register_options_table_contents' ) ) {
+	function gulir_register_options_table_contents() {
+
+		return [
+			'title'  => esc_html__( 'Table of Contents', 'gulir' ),
+			'id'     => 'gulir_config_section_table_contents',
+			'desc'   => esc_html__( 'Select settings for table of contents.', 'gulir' ),
+			'icon'   => 'el el-th-list',
+			'fields' => [
+				[
+					'id'     => 'section_start_table_contents_ptype',
+					'type'   => 'section',
+					'class'  => 'ruby-section-start',
+					'title'  => esc_html__( 'Post Type Supported', 'gulir' ),
+					'indent' => true,
+				],
+				[
+					'id'          => 'table_contents_post_types',
+					'type'        => 'textarea',
+					'rows'        => 2,
+					'title'       => esc_html__( 'Support Post Types', 'gulir' ),
+					'subtitle'    => esc_html__( 'You can input your custom post type if you want it to be active only for specific post types.', 'gulir' ),
+					'description' => esc_html__( 'Separated by commas. For example,"post, page, podcast". Leave it blank to disable and input "all" to support all post types.', 'gulir' ),
+					'placeholder' => 'post, page, podcast',
+					'default'     => 'post, podcast',
+				],
+				[
+					'id'     => 'section_end_table_contents_ptype',
+					'type'   => 'section',
+					'class'  => 'ruby-section-end',
+					'indent' => false,
+				],
+				[
+					'id'     => 'section_start_table_contents_heading',
+					'type'   => 'section',
+					'class'  => 'ruby-section-start',
+					'title'  => esc_html__( 'Heading Tag Supported', 'gulir' ),
+					'indent' => true,
+				],
+				[
+					'id'       => 'table_contents_h2',
+					'type'     => 'switch',
+					'title'    => esc_html__( 'Support H2', 'gulir' ),
+					'subtitle' => esc_html__( 'Support H2 tag, Turn this option off if you would like to exclude H2 tag out of the table of contents.', 'gulir' ),
+					'default'  => true,
+				],
+				[
+					'id'       => 'table_contents_h3',
+					'type'     => 'switch',
+					'title'    => esc_html__( 'Support H3', 'gulir' ),
+					'subtitle' => esc_html__( 'Support H3 tag, Turn this option off if you would like to exclude H3 tag out of the table of contents.', 'gulir' ),
+					'default'  => true,
+				],
+				[
+					'id'       => 'table_contents_h4',
+					'type'     => 'switch',
+					'title'    => esc_html__( 'Support H4', 'gulir' ),
+					'subtitle' => esc_html__( 'Support H4 tag, Turn this option off if you would like to exclude H4 tag out of the table of contents.', 'gulir' ),
+					'default'  => false,
+				],
+				[
+					'id'       => 'table_contents_h5',
+					'type'     => 'switch',
+					'title'    => esc_html__( 'Support H5', 'gulir' ),
+					'subtitle' => esc_html__( 'Support H5 tag, Turn this option off if you would like to exclude H5 tag out of the table of contents.', 'gulir' ),
+					'default'  => false,
+				],
+				[
+					'id'       => 'table_contents_h6',
+					'type'     => 'switch',
+					'title'    => esc_html__( 'Support H6', 'gulir' ),
+					'subtitle' => esc_html__( 'Support H6 tag, Turn this option off if you would like to exclude H6 tag out of the table of contents.', 'gulir' ),
+					'default'  => false,
+				],
+				[
+					'id'     => 'section_end_table_contents_heading',
+					'type'   => 'section',
+					'class'  => 'ruby-section-end',
+					'indent' => false,
+				],
+				[
+					'id'     => 'section_start_table_contents_layout',
+					'type'   => 'section',
+					'class'  => 'ruby-section-start',
+					'title'  => esc_html__( 'Layout', 'gulir' ),
+					'indent' => true,
+				],
+				[
+					'id'       => 'table_contents_layout',
+					'title'    => esc_html__( 'Layout', 'gulir' ),
+					'subtitle' => esc_html__( 'Select a layout for the table of contents.', 'gulir' ),
+					'type'     => 'select',
+					'options'  => [
+						'1' => esc_html__( 'Full Width (2 Columns)', 'gulir' ),
+						'2' => esc_html__( 'Half Width', 'gulir' ),
+						'3' => esc_html__( 'Full Width (1 Column)', 'gulir' ),
+					],
+					'default'  => '1',
+				],
+				[
+					'id'       => 'table_contents_enable',
+					'type'     => 'text',
+					'class'    => 'small',
+					'validate' => 'numeric',
+					'title'    => esc_html__( 'Enable When', 'gulir' ),
+					'subtitle' => esc_html__( 'Input a minimum value for total heading tags to show the table of contents box.', 'gulir' ),
+					'default'  => 2,
+				],
+				[
+					'id'       => 'table_contents_heading',
+					'type'     => 'text',
+					'title'    => esc_html__( 'Table of Contents Heading', 'gulir' ),
+					'subtitle' => esc_html__( 'Input the heading for the table of contents box.', 'gulir' ),
+					'default'  => esc_html__( 'Contents', 'gulir' ),
+				],
+				[
+					'id'       => 'table_contents_position',
+					'class'    => 'small',
+					'validate' => 'numeric',
+					'type'     => 'text',
+					'title'    => esc_html__( 'Display Position', 'gulir' ),
+					'subtitle' => esc_html__( 'Input a position (after x paragraphs) to display the table of contents box.', 'gulir' ),
+					'default'  => 1,
+				],
+				[
+					'id'          => 'table_contents_hierarchy',
+					'type'        => 'switch',
+					'title'       => esc_html__( 'Show Hierarchy', 'gulir' ),
+					'subtitle'    => esc_html__( 'Enable or disable hierarchy for the table of contents box.', 'gulir' ),
+					'description' => esc_html__( 'This setting will not apply to the full width 2 columns layout.', 'gulir' ),
+					'default'     => true,
+				],
+				[
+					'id'       => 'table_contents_numlist',
+					'type'     => 'switch',
+					'title'    => esc_html__( 'Show Number list', 'gulir' ),
+					'subtitle' => esc_html__( 'Enable or disable the number list items.', 'gulir' ),
+					'default'  => true,
+				],
+				[
+					'id'       => 'table_contents_scroll',
+					'type'     => 'switch',
+					'title'    => esc_html__( 'Smooth Scroll', 'gulir' ),
+					'subtitle' => esc_html__( 'Enable or disable smooth scroll effect to jump to the anchor link.', 'gulir' ),
+					'default'  => true,
+				],
+				[
+					'id'       => 'table_contents_toggle',
+					'type'     => 'switch',
+					'title'    => esc_html__( 'Collapse Toggle', 'gulir' ),
+					'subtitle' => esc_html__( 'Enable the collapsed toggle button.', 'gulir' ),
+					'default'  => true,
+				],
+				[
+					'id'          => 'table_contents_hide',
+					'type'        => 'switch',
+					'title'       => esc_html__( 'Hide Table of Contents on Load', 'gulir' ),
+					'subtitle'    => esc_html__( 'Automatically concealing the table of contents when the content is initially loaded.', 'gulir' ),
+					'description' => esc_html__( 'This feature requests the "Collapse Toggle" setting to be turned on.', 'gulir' ),
+					'default'     => false,
+				],
+				[
+					'id'     => 'section_end_table_contents_layout',
+					'type'   => 'section',
+					'class'  => 'ruby-section-end',
+					'indent' => false,
+				],
+			],
+		];
+	}
+}
